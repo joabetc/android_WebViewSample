@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         btnGo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                webViewSite.setWebViewClient(new WebViewClient());
                 String address = "http://" + edtUrl.getText().toString();
                 webViewSite.loadUrl(address);
             }
